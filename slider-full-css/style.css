@@ -1,0 +1,124 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Horizontal Slider */
+.slider-1 {
+    max-width: 600px;
+    margin: 100px auto;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+.slider-1 .slider {
+    display: flex;
+    animation: slider-1 15s ease-in-out infinite;
+    /*flex-direction: row-reverse;*/
+}
+.slider-1 p {
+    background: #712121;
+    flex-shrink: 0;
+    padding: 72px 0;
+    width: 100%;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 25px;
+    font-weight: 900;
+}
+.slider-1 p:nth-child(2) {
+    background: #b12d2d;
+}
+.slider-1 p:nth-child(3) {
+    background: #f80b0b;
+}
+.slider-1 p:nth-child(4) {
+    background: #aa7272;
+}
+
+/* Animation */
+@keyframes slider-1 {
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+    25%,
+    45%{
+        transform: translateX(-100%);
+    }
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+    75%,
+    95% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+}
+
+/* Vertical Slider */
+.slider-2 {
+    max-width: 600px;
+    width: 100%;
+    height: 200px;
+    margin: 100px auto;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+.slider-2 .slider {
+    height: 100%;
+    animation: slider-2 15s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+}
+.slider-2 p {
+    background: #214671;
+    flex-shrink: 0;
+    padding: 72px 0;
+    width: 100%;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 25px;
+}
+.slider-2 p:nth-child(2) {
+    background: #2d69b1;
+}
+.slider-2 p:nth-child(3) {
+    background: #0b7cf8;
+}
+.slider-2 p:nth-child(4) {
+    background: #5d97d6;
+}
+
+/* Animation */
+@keyframes slider-2 {
+    0%,
+    20% {
+        transform: translateY(0);
+    }
+    25%,
+    45%{
+        transform: translateY(-100%);
+    }
+    50%,
+    70% {
+        transform: translateY(-200%);
+    }
+    75%,
+    95% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(-400%);
+    }
+}
